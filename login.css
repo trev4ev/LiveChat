@@ -18,7 +18,7 @@ input {
     padding-left: 4%;
     padding-right: 4%;
     color: #a67ee6;
-    border: 5px solid #9590a3;
+    border: 3px solid #9590a3;
     background-color: transparent;
     margin-top: 8%;
     font-size: 110%;
@@ -30,11 +30,11 @@ input:focus {
 }
 
 button {
-    border: 5px solid #9590a3;
+    border: 3px solid #9590a3;
     background-color: transparent;
     color: #a67ee6;
-    width: 18%;
-    height: 22%;
+    width: 24%;
+    height: 26%;
     margin-top: 8%;
     font-size: 100%;    
 }
