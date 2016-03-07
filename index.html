@@ -2,12 +2,14 @@
 <html>
     <head>
         <title>Login</title>
+        <link href = "login.css" type = text/css rel = stylesheet>
         <script src = 'https://cdn.firebase.com/js/client/2.4.1/firebase.js'></script>
         <script src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
     </head>
     <body>
         <div id = 'login-panel'>
-            <input type = text id = 'email' placeholder = "Email">
+            <input type = text id = 'email' placeholder = "Email" autocorrect="off" autocapitalize="off" 
+spellcheck="false">
             <input type = password id = 'password' placeholder = "Password">
             <button type = "button" onclick= "login()">Sign In</button>
         </div>
