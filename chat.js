@@ -4,7 +4,8 @@ var users = {
     "46c015f9-af9f-4d48-bd5b-d0671916061a" : 'Trevor',
     "8a7601d5-067f-4826-94bc-4c511bc6a5ec" : 'Henry',
     "47b14d15-4b0d-4fa6-8407-1fcbe4762fbe" : 'Andrew',
-    "d06a8191-0adb-44f3-9ab3-950979ab5b38" : 'Jessica'
+    "d06a8191-0adb-44f3-9ab3-950979ab5b38" : 'Jessica',
+    "c624d110-5fa3-4f7c-b586-2f2e656ca0ab" : 'Eric'
 }
 
 // CLEAR ALL MESSAGES
