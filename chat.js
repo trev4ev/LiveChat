@@ -22,7 +22,12 @@ $('#messageInput').keypress( function(e) {
         if(authData) {
             username = users[authData.uid];
         }
-        fb.push({name: username, text: message});
+        var d = new Date();
+        var h = d.getHours();
+        var m = d.getMinutes();
+        var s = d.getSeconds();
+        var timestamp = h + ":" + m + ":" + s;
+        fb.push({name: username, text: message, time: timestamp});
         $('#messageInput').val('');                    
     }
 });
@@ -30,18 +35,15 @@ $('#messageInput').keypress( function(e) {
 // UPDATE DATABASE
 fb.on('child_added', function(snapshot) {
     var message = snapshot.val();
-    addChatMessage(message.name, message.text);
+    addChatMessage(message.name, message.text, message.time);
 });
             
 fb.on('child_removed', function(snapshot) {
     $('#messagesDiv').empty();
 });
             
-function addChatMessage(name, text) {
-    var d = new Date();
-    var h = d.getHours();
-    var m = d.getMinutes();
-    $('<div/>').prepend("\t" + h + ":" + m).prepend(text).prepend( name+': ').appendTo($('#messagesDiv'));
+function addChatMessage(name, text, time) {
+    $('<div/>').prepend("\t" + time).prepend(text).prepend( name+': ').appendTo($('#messagesDiv'));
     $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
 };
 
