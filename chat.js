@@ -37,7 +37,10 @@ fb.on('child_removed', function(snapshot) {
 });
             
 function addChatMessage(name, text) {
-    $('<div/>').text(text).prepend( name+': ').appendTo($('#messagesDiv'));
+    var d = new Date();
+    var h = d.getHours();
+    var m = d.getMinutes();
+    $('<div/>').prepend("\t" + h + ":" + m).prepend(text).prepend( name+': ').appendTo($('#messagesDiv'));
     $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
 };
 
