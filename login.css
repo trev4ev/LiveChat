@@ -35,6 +35,8 @@ button {
     width: 120px;
     height: 45px;
     margin-top: 25px;
+    margin-left: 7px;
+    margin-right: 7px;
     font-size: 100%;    
 }
 

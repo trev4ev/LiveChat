@@ -20,6 +20,11 @@ function login() {
     }, authHandler)
 }
 
+function guestLogin() {
+    fb.unauth();
+    window.location = 'chat.html';
+}
+
 $('#login-panel').keypress( function(e) {
     if(e.keyCode == 13) {
         login();                  

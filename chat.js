@@ -1,5 +1,7 @@
 var fb = new Firebase("https://intense-inferno-1365.firebaseio.com");
+
 var username = 'Guest';
+
 var users = {
     "46c015f9-af9f-4d48-bd5b-d0671916061a" : 'Trevor',
     "8a7601d5-067f-4826-94bc-4c511bc6a5ec" : 'Henry',
@@ -43,8 +45,11 @@ fb.on('child_removed', function(snapshot) {
 });
             
 function addChatMessage(name, text, time) {
-    var x = Document.createElement("DIV");
-    var t = Document.createTextNode(name + ": " + text + "\t\t" + time);
+    var x = document.createElement("DIV");
+    var p = document.createElement("P");
+    var t = document.createTextNode(name + ": " + text + "\t\t" + time);
+    p.appendChild(t);
+    x.appendChild(p);
     $('#messagesDiv').append(x);
     //$('<div/>').prepend("   " + time).prepend(text).prepend( name+': ').appendTo($('#messagesDiv'));
     $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
