@@ -8,7 +8,8 @@ var users = {
     "47b14d15-4b0d-4fa6-8407-1fcbe4762fbe" : 'Andrew',
     "d06a8191-0adb-44f3-9ab3-950979ab5b38" : 'Jessica',
     "c624d110-5fa3-4f7c-b586-2f2e656ca0ab" : 'Eric',
-    "4841d51e-92bd-46f7-b505-8e5e2d92df7a" : 'Aaron'
+    "4841d51e-92bd-46f7-b505-8e5e2d92df7a" : 'Aaron',
+    "07b9eb6e-be58-4d34-8eae-2ac10d9083e5" : 'Bailey'
 }
 
 // CLEAR ALL MESSAGES
