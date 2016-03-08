@@ -29,7 +29,11 @@ $('#messageInput').keypress( function(e) {
         var d = new Date();
         var h = d.getHours();
         var m = d.getMinutes();
+        if(m < 10)
+            m = "0" + m;
         var s = d.getSeconds();
+        if(s < 10)
+            s = "0" + s
         var timestamp = h + ":" + m + ":" + s;
         fb.push({name: username, text: message, time: timestamp});
         $('#messageInput').val('');                    
