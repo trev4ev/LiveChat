@@ -42,7 +42,7 @@ $('#messageInput').keypress( function(e) {
             //username = fb.child('Users').get[authData.uid];
         }
         fb.child('Messages').push({name: username, text: message, time: timestamp});
-        console.log(username)
+        console.log(username);
         $('#messageInput').val('');                    
     }
 });
