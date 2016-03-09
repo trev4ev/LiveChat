@@ -23,14 +23,6 @@ $('#messageInput').keypress( function(e) {
     if(e.keyCode == 13) {
         var message = $('#messageInput').val();
         var authData = fb.getAuth();
-        if(authData) {
-			console.log('authorized');
-			fb.once('value', function(snapshot){
-				console.log('what');
-				username = snapshot.child('Users').child(authData.uid).val();
-			});
-            //username = fb.child('Users').get[authData.uid];
-        }
         var d = new Date();
         var h = d.getHours();
         var m = d.getMinutes();
@@ -40,6 +32,14 @@ $('#messageInput').keypress( function(e) {
         if(s < 10)
             s = "0" + s
         var timestamp = h + ":" + m + ":" + s;
+        if(authData) {
+			console.log('authorized');
+			fb.once('value', function(snapshot){
+				console.log('what');
+				username = snapshot.child('Users').child(authData.uid).val();
+			});
+            //username = fb.child('Users').get[authData.uid];
+        }
         fb.child('Messages').push({name: username, text: message, time: timestamp});
         $('#messageInput').val('');                    
     }
