@@ -37,6 +37,7 @@ $('#messageInput').keypress( function(e) {
 			fb.once('value', function(snapshot){
 				console.log('what');
 				username = snapshot.child('Users').child(authData.uid).val();
+				console.log(username);
 			});
             //username = fb.child('Users').get[authData.uid];
         }
