@@ -42,8 +42,9 @@ $('#messageInput').keypress( function(e) {
         	var timestamp = h + ":" + m + ":" + s;
         	fb.child('Messages').push({name: username, text: message, time: timestamp});
         	console.log(username);
-        	$('#messageInput').val('');   
+        	
         }
+        $('#messageInput').val('');   
     }
 });
       
