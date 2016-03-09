@@ -24,7 +24,9 @@ $('#messageInput').keypress( function(e) {
         var message = $('#messageInput').val();
         var authData = fb.getAuth();
         if(authData) {
+			console.log('authorized');
 			fb.once('value', function(snapshot){
+				console.log('what');
 				username = snapshot.child('Users').child(authData.uid).val();
 			});
             //username = fb.child('Users').get[authData.uid];
