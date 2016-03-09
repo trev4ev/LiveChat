@@ -15,7 +15,7 @@ var users = {
 // CLEAR ALL MESSAGES
 function end() {   
     if(confirm("All messages will be cleared permanently!")) {
-        fb.remove();
+        fb.child('Messages').remove();
     }
 };
             
@@ -24,7 +24,10 @@ $('#messageInput').keypress( function(e) {
         var message = $('#messageInput').val();
         var authData = fb.getAuth();
         if(authData) {
-            username = users[authData.uid];
+			fb.once('value', function(snapshot){
+				username = snapshot.child('Users').child(authData.uid).val();
+			});
+            //username = fb.child('Users').get[authData.uid];
         }
         var d = new Date();
         var h = d.getHours();
@@ -35,18 +38,20 @@ $('#messageInput').keypress( function(e) {
         if(s < 10)
             s = "0" + s
         var timestamp = h + ":" + m + ":" + s;
-        fb.push({name: username, text: message, time: timestamp});
+        fb.child('Messages').push({name: username, text: message, time: timestamp});
         $('#messageInput').val('');                    
     }
 });
       
 // UPDATE DATABASE
-fb.on('child_added', function(snapshot) {
+fb.child('Messages').on('child_added', function(snapshot) {
     var message = snapshot.val();
-    addChatMessage(message.name, message.text, message.time);
+	if(message.name != undefined) {
+		addChatMessage(message.name, message.text, message.time);
+	}
 });
             
-fb.on('child_removed', function(snapshot) {
+fb.child('Messages').on('child_removed', function(snapshot) {
     $('#messagesDiv').empty();
 });
             
