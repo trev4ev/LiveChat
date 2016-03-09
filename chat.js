@@ -2,6 +2,14 @@ var fb = new Firebase("https://intense-inferno-1365.firebaseio.com");
 
 var username = 'Guest';
 
+var authData = fb.getAuth();
+if(authData) {
+	fb.once('value', function(snapshot){
+		username = snapshot.child('Users').child(authData.uid).val();
+	});
+//username = fb.child('Users').get[authData.uid];
+}
+
 var users = {
     "46c015f9-af9f-4d48-bd5b-d0671916061a" : 'Trevor',
     "8a7601d5-067f-4826-94bc-4c511bc6a5ec" : 'Henry',
@@ -22,7 +30,6 @@ function end() {
 $('#messageInput').keypress( function(e) {
     if(e.keyCode == 13) {
         var message = $('#messageInput').val();
-        var authData = fb.getAuth();
         var d = new Date();
         var h = d.getHours();
         var m = d.getMinutes();
@@ -32,15 +39,6 @@ $('#messageInput').keypress( function(e) {
         if(s < 10)
             s = "0" + s
         var timestamp = h + ":" + m + ":" + s;
-        if(authData) {
-			console.log('authorized');
-			fb.once('value', function(snapshot){
-				console.log('what');
-				username = snapshot.child('Users').child(authData.uid).val();
-				console.log(username);
-			});
-            //username = fb.child('Users').get[authData.uid];
-        }
         fb.child('Messages').push({name: username, text: message, time: timestamp});
         console.log(username);
         $('#messageInput').val('');                    
