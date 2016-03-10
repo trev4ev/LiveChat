@@ -1,7 +1,5 @@
 var fb = new Firebase("https://intense-inferno-1365.firebaseio.com");
-
 var username = 'Guest ' + Math.floor(Math.random()*100);
-
 var authData = fb.getAuth();
 if(authData) {
 	fb.once('value', function(snapshot){
@@ -9,6 +7,8 @@ if(authData) {
 	});
 //username = fb.child('Users').get[authData.uid];
 }
+
+//var username = 'Guest ' + Math.floor(Math.random()*100);
 
 // CLEAR ALL MESSAGES
 function end() {   
