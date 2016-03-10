@@ -1,0 +1,90 @@
+body {
+    background-color: #320e6c;
+    text-align: center;
+}
+
+input {
+    margin: auto;
+    display: inline;
+    width: 260px;
+    height: 30px;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #a67ee6;
+    border: 3px solid #9590a3;
+    background-color: transparent;
+    font-size: 80%;
+}
+
+input:focus {
+    outline: none; 
+    border-style: double;
+}
+
+#messagesDiv {
+    width: 450px;
+    margin: auto;
+}
+
+.message {
+    padding: 8px;
+    display: inline;
+    background-color: #9590a3;
+    color: #320e6c;
+    border-radius: 5px;
+}
+
+.selfMessage {
+    padding: 8px;
+    display: inline;
+    background-color: transparent;
+    color: #9590a3;
+    border: 1.5px solid #9590a3;
+    border-radius: 5px;
+}
+
+.messageContainer {
+    margin: 25px;
+    text-align: left;
+}
+
+.selfMessageContainer {
+    margin: 25px;
+    text-align: right;
+}
+
+button {
+    text-align: center;
+    padding: 0;
+    margin: auto;
+    display: inline;
+    width: 50px;
+    height: 36px;
+    color: #9590a3;
+    border: 3px solid #9590a3;
+    background-color: transparent;
+    font-size: 80%;
+}
+
+button:hover {
+    color: #a67ee6;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #9590a3;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #9590a3;
+    opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #9590a3;
+    opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #9590a3;
+}
+:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+    color: #9590a3;
+}
