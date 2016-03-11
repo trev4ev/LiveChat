@@ -1,5 +1,5 @@
 body {
-    background-color: #320e6c;
+    background-color: #2D767F;
 }
 
 #login-panel {
@@ -16,8 +16,8 @@ input {
     height: 45px;
     padding-left: 20px;
     padding-right: 20px;
-    color: #a67ee6;
-    border: 3px solid #9590a3;
+    color: #B4F1F1;
+    border: 3px solid #ECFFFB;
     background-color: transparent;
     margin-top: 15px;
     font-size: 110%;
@@ -29,9 +29,9 @@ input:focus {
 }
 
 button {
-    border: 3px solid #9590a3;
+    border: 3px solid #ECFFFB;
     background-color: transparent;
-    color: #a67ee6;
+    color: #B4F1F1;
     width: 120px;
     height: 45px;
     margin-top: 25px;
@@ -41,23 +41,23 @@ button {
 }
 
 button:hover {
-    border-color: #a67ee6;
+    border-color: #B4F1F1;
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color: #9590a3;
+    color: #ECFFFB;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color: #9590a3;
+    color: #ECFFFB;
     opacity: 1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color: #9590a3;
+    color: #ECFFFB;
     opacity: 1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #9590a3;
+    color: #ECFFFB;
 }
 :placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
-    color: #9590a3;
+    color: #ECFFFB;
 }
