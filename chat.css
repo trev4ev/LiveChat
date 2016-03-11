@@ -24,6 +24,8 @@ input:focus {
 
 #messagesDiv {
     width: 450px;
+    height:; 90vh;
+    overflow-y: auto;
     margin: auto;
 }
 
