@@ -4,11 +4,19 @@ var authData = fb.getAuth();
 if(authData) {
 	fb.once('value', function(snapshot){
 		username = snapshot.child('Users').child(authData.uid).val();
+        convert();
 	});
 //username = fb.child('Users').get[authData.uid];
 }
 
 //var username = 'Guest ' + Math.floor(Math.random()*100);
+
+function convert() {
+    $('.' + username).each(function(i, obj) {
+        obj.className = 'selfMessageContainer ' + username;
+        obj.firstChild.className = 'selfMessage';
+    });
+}
 
 // CLEAR ALL MESSAGES
 function end() {   
@@ -56,15 +64,16 @@ function addChatMessage(name, text, time) {
     var x = document.createElement("DIV");
     var p = document.createElement("P");
     if(username == name) {
-        x.className = 'selfMessageContainer'
+        x.className = 'selfMessageContainer ' + name;
         p.className = 'selfMessage';
         var t = document.createTextNode(text);
     }
     else{
-        x.className = 'messageContainer'
+        x.className = 'messageContainer ' + name;
         p.className = 'message';
         var t = document.createTextNode(name + ": " + text);// + "\t\t" + time);
     }
+    //x.className = name;
     p.appendChild(t);
     x.appendChild(p);
     $('#messagesDiv').append(x);
