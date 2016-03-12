@@ -121,3 +121,27 @@ button:hover {
 :placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
     color: #ECFFFB;
 }
+
+@media screen and (max-width: 1000px) {
+    #messagesDiv{
+        width: 90vw;
+        height: 80vh;
+        max-height: 80vh;
+    }
+    
+    button {
+        width: 15vw;
+        height: 85px;
+        font-size: 30px;
+    }
+    
+    input {
+        width: 75vw;
+        height: 79px;
+        font-size: 30px;
+    }
+    
+    h1 {
+        font-size: 60px;
+    }
+}
