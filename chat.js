@@ -15,6 +15,8 @@ function convert() {
     $('.' + username).each(function(i, obj) {
         obj.className = 'selfMessageContainer ' + username;
         obj.firstChild.className = 'selfMessage';
+        var x = obj.firstChild.innerHTML;
+        obj.firstChild.innerHTML = x.substring(username.length + 2);
     });
 }
 

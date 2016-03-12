@@ -3,6 +3,12 @@ body {
     text-align: center;
 }
 
+h1 {
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
 input {
     margin: auto;
     display: inline;
@@ -11,7 +17,7 @@ input {
     padding: 0;
     padding-left: 10px;
     padding-right: 10px;
-    color: #B4F1F1;;
+    color: #B4F1F1;
     border: 3px solid #ECFFFB;
     background-color: transparent;
     font-size: 80%;
@@ -24,10 +30,29 @@ input:focus {
 
 #messagesDiv {
     width: 450px;
-    height: 90vh;
-    max-height: 90vh;
+    height: 74vh;
+    max-height: 74vh;
     overflow-y: auto;
     margin: auto;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.3);
+    padding: 5px;
+}
+
+
+#messagesDiv::-webkit-scrollbar {
+    width: 0.5em;
+}
+ 
+#messagesDiv::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 4px;
+}
+ 
+#messagesDiv::-webkit-scrollbar-thumb {
+    opacity: 0.8;
+    background-color: #B4F1F1;
+    border-radius: 4px;
 }
 
 .message {
