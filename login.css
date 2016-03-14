@@ -9,17 +9,10 @@ body {
     text-align: center;
 }
 
-#register-panel {
-    margin: auto;
-    margin-top: 20vh;
-    width: 500px;
-    text-align: center;
-}
-
 input {
     margin: auto;
     display: block;
-    width: 348px;
+    width: 320px;
     height: 45px;
     padding-left: 20px;
     padding-right: 20px;
