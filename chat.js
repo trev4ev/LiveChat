@@ -1,13 +1,16 @@
 var fb = new Firebase("https://intense-inferno-1365.firebaseio.com");
-var username = 'Guest ' + Math.floor(Math.random()*100);
-var authData = fb.getAuth();
-if(authData) {
-	fb.once('value', function(snapshot){
-		username = snapshot.child('Users').child(authData.uid).val();
-        convert();
-	});
+var username = 'Guest ' + Math.floor(Math.random()*1000);
+if(localStorage.getItem('name') != ""){
+    username = localStorage.getItem('name');
+};
+//var authData = fb.getAuth();
+//if(authData) {
+	//fb.once('value', function(snapshot){
+	//	username = snapshot.child('Users').child(authData.uid).val();
+    //    convert();
+	//});
 //username = fb.child('Users').get[authData.uid];
-}
+//}
 
 //var username = 'Guest ' + Math.floor(Math.random()*100);
 
