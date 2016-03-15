@@ -1,4 +1,4 @@
-var fb = new Firebase("https://intense-inferno-1365.firebaseio.com");
+//var fb = new Firebase("https://intense-inferno-1365.firebaseio.com");
 var username = 'Guest ' + Math.floor(Math.random()*1000);
 if(localStorage.getItem('name') != ""){
     username = localStorage.getItem('name');
